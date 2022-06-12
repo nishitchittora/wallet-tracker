@@ -11,12 +11,12 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { useMoralis } from "react-moralis";
-import Balance from "./components/Balance";
-import Header from "./components/Header";
-import NFTs from "./components/NFTs";
-import Profile from "./components/Profile";
-import SendETH from "./components/SendETH";
-import Transactions from "./components/Transactions";
+import Balance from "../components/Balance";
+import Header from "../components/Header";
+import NFTs from "../components/NFTs";
+import Profile from "../components/Profile";
+import SendETH from "../components/SendETH";
+import Transactions from "../components/Transactions";
 
 export default function Home() {
     const { isAuthenticated, authenticate, user, isLoggingOut, logout } =
