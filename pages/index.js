@@ -41,7 +41,12 @@ export default function Home() {
                             Dashboard
                         </Text>
                         <Button
-                            onClick={() => authenticate({})}
+                            onClick={() =>
+                                authenticate({
+                                    signingMessage:
+                                        "Sign required to login in Dashboard",
+                                })
+                            }
                             colorScheme="purple"
                         >
                             Login with metamask
@@ -86,10 +91,10 @@ export default function Home() {
                                         ></Transactions>
                                     </TabPanel>
                                     <TabPanel>
-                                        <NFTs></NFTs>
+                                        <NFTs user={user}></NFTs>
                                     </TabPanel>
                                     <TabPanel>
-                                        <SendETH></SendETH>
+                                        <SendETH user={user}></SendETH>
                                     </TabPanel>
                                 </TabPanels>
                             </Tabs>

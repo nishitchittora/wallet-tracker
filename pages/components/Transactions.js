@@ -24,7 +24,6 @@ export default function Transactions({ user }) {
     console.log(transactions);
     return (
         <CustomContainer>
-            {" "}
             <Text>Last 10 Transactions</Text>
             {transactions.map((transaction) => {
                 return (
