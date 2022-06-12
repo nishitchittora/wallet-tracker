@@ -7,7 +7,6 @@ export default function Transactions({ user }) {
     const Web3API = useMoralisWeb3Api();
     const [transactions, setTransactions] = useState([]);
     const BASE_URL = "https://rinkeby.etherscan.io/tx/";
-    console.log(process.env.NEXT_PUBLIC_NETWORK);
     const fetchTransactions = async () => {
         const data = await Web3API.account.getTransactions({
             chain: process.env.NEXT_PUBLIC_NETWORK,
@@ -22,7 +21,6 @@ export default function Transactions({ user }) {
     useEffect(() => {
         fetchTransactions();
     }, []);
-    console.log(transactions);
     return (
         <CustomContainer>
             <Text>Last 10 Transactions</Text>

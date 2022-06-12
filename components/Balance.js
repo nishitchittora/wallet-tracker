@@ -18,7 +18,6 @@ export default function Balance({ user }) {
         if (result.balance) {
             setEthBalance(Moralis.Units.FromWei(result.balance));
         }
-        console.log(result);
     };
 
     useEffect(() => {
@@ -30,7 +29,6 @@ export default function Balance({ user }) {
             },
         });
     }, []);
-    console.log(data);
     return (
         <CustomContainer>
             <Text mb="6" fontSize="xl" fontWeight="bold">
