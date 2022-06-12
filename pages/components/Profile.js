@@ -8,7 +8,7 @@ import CustomContainer from "./CustomContainer";
 
 export default function Profile({ user }) {
     const { setUserData, isUserUpdating } = useMoralis();
-    const [username, setUsername] = useState();
+    const [username, setUsername] = useState("");
 
     return (
         <CustomContainer>
@@ -21,6 +21,7 @@ export default function Profile({ user }) {
                         setUserData({
                             username: username,
                         });
+                        setUsername("");
                     }
                 }}
             >
