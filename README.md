@@ -1,6 +1,5 @@
 # wallet-tracker
-Wallet account tracker including Balance, NFTs, Transaction
-
+Wallet Tracker including Balance(incl. ERC-20 Tokens), NFTs, Transaction and send ETH
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
