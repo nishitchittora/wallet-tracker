@@ -7,9 +7,10 @@ export default function Transactions({ user }) {
     const Web3API = useMoralisWeb3Api();
     const [transactions, setTransactions] = useState([]);
     const BASE_URL = "https://rinkeby.etherscan.io/tx/";
+    console.log(process.env.NEXT_PUBLIC_NETWORK);
     const fetchTransactions = async () => {
         const data = await Web3API.account.getTransactions({
-            chain: "rinkeby",
+            chain: process.env.NEXT_PUBLIC_NETWORK,
             address: user.get("ethAddress"),
             limit: 10,
         });

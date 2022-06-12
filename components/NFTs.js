@@ -7,11 +7,11 @@ export default function NFTs({ user }) {
     useEffect(() => {
         getNFTBalances({
             params: {
-                chain: "rinkeby",
+                chain: process.env.NEXT_PUBLIC_NETWORK,
                 address: user.get("ethAddress"),
             },
         });
-    });
+    }, []);
     console.log(data);
     return <CustomContainer></CustomContainer>;
 }
