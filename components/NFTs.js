@@ -17,7 +17,7 @@ export default function NFTs({ user }) {
     console.log(data);
     return (
         <CustomContainer>
-            <Text>My NFT's</Text>
+            <Text>My NFT&apos;s</Text>
             {data &&
                 data?.result?.map((nft) => {
                     return (
