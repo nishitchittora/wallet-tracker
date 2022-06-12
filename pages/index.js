@@ -13,7 +13,10 @@ import Head from "next/head";
 import { useMoralis } from "react-moralis";
 import Balance from "./components/Balance";
 import Header from "./components/Header";
+import NFTs from "./components/NFTs";
 import Profile from "./components/Profile";
+import SendETH from "./components/SendETH";
+import Transactions from "./components/Transactions";
 
 export default function Home() {
     const { isAuthenticated, authenticate, user, isLoggingOut, logout } =
@@ -77,9 +80,17 @@ export default function Home() {
                                     <TabPanel>
                                         <Balance user={user} />
                                     </TabPanel>
-                                    <TabPanel>Transactions</TabPanel>
-                                    <TabPanel>NFTs</TabPanel>
-                                    <TabPanel>Send ETH</TabPanel>
+                                    <TabPanel>
+                                        <Transactions
+                                            user={user}
+                                        ></Transactions>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <NFTs></NFTs>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <SendETH></SendETH>
+                                    </TabPanel>
                                 </TabPanels>
                             </Tabs>
                         </Box>
