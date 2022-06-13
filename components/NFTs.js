@@ -1,4 +1,5 @@
 import { Image } from "@chakra-ui/image";
+import { Link } from "@chakra-ui/layout";
 import { Box, Text } from "@chakra-ui/layout";
 import { useEffect } from "react";
 import { useNFTBalances } from "react-moralis";
@@ -30,6 +31,10 @@ export default function NFTs({ user }) {
                             key={nft.token_uri}
                         >
                             {nft.image && <Image src={nft.image} />}
+
+                            <Link href={nft.token_uri} isExternal>
+                                {nft.name}
+                            </Link>
                         </Box>
                     );
                 })}
